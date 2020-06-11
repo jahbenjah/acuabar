@@ -1,0 +1,42 @@
+# Site settings
+title: Acua
+email: Acua@acuabar.com
+description: >- 
+  
+baseurl: ""
+url: "https://acuabar.com/" # the base hostname & protocol for your site, e.g. http://example.com
+google_analytics: UA-162867542-4
+lang: en_us
+
+minima:
+  date_format: "%-d de %B del %Y"
+
+social:
+  name: Acua
+  links:
+    - https://www.facebook.com/acuabajabarymar
+    - https://www.instagram.com/acuabajamar/
+
+# Build settings
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-sitemap
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - package-lock.json
+  - package.json
+  - gulpfile.js
+  - img-temp/
