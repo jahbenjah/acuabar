@@ -109,6 +109,8 @@ jQuery(document).ready(function ($) {
       type: "POST",
       url: action,
       data: str,
+      dataType: 'jsonp',
+      accepts: "application/json"
     })
       .done(function () {
         this_form.find('.loading').slideUp();
