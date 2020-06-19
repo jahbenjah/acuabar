@@ -109,7 +109,7 @@ jQuery(document).ready(function ($) {
       type: "POST",
       url: action,
       data: str,
-      dataType: 'jsonp',
+      crossDomain:true,
       accepts: "application/json"
     })
       .done(function () {
