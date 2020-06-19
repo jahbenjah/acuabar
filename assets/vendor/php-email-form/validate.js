@@ -109,8 +109,7 @@ jQuery(document).ready(function ($) {
       type: "POST",
       url: action,
       data: str,
-      crossDomain:true,
-      accepts: "application/json"
+      crossDomain:true
     })
       .done(function () {
         this_form.find('.loading').slideUp();
