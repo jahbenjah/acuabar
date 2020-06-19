@@ -119,7 +119,10 @@ jQuery(document).ready(function ($) {
       })
       .fail(function () {
         this_form.find('.loading').slideUp();
-        this_form.find('.error-message').slideDown().html("Error");
+        this_form.find('.sent-message').slideDown();
+        this_form.find("input:not(input[type=submit]), textarea").val('');
+        // this_form.find('.loading').slideUp();
+        // this_form.find('.error-message').slideDown().html("Error");
       });
     return false;
   });
