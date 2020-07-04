@@ -47,8 +47,8 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #cda45e;
-  border-bottom-color: #cda45e;
+  border-top-color: #23B7D1;
+  border-bottom-color: #23B7D1;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 #topbar .languages ul a {
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #cda45e;
+  color: #23B7D1;
   text-decoration: none;
 }
 
@@ -417,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav .book-a-table a {
   color: #fff;
-  border: 2px solid #cda45e;
+  border: 2px solid #23B7D1;
   border-radius: 50px;
   margin: 20px 0 0 0;
   padding: 10px 25px;
@@ -430,7 +430,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .book-a-table a:hover {
-  background: #cda45e;
+  background: #23B7D1;
   color: #fff;
 }
 
@@ -1644,7 +1644,7 @@ section {
 #footer {
   background: black;
   padding: 0 0 30px 0;
-  color: #23B7D1;
+  color: whitesmoke;
   font-size: 14px;
 }
 
