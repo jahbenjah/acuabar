@@ -93,13 +93,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  color: #cda45e;
+  color: #23B7D1;
   transition: all 0.4s;
-  border: 2px solid #cda45e;
+  border: 2px solid whitesmoke;
 }
 
 .back-to-top i:hover {
-  background: #cda45e;
+  background: #23B7D1;
   color: #1a1814;
 }
 
@@ -126,11 +126,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .contact-info {
-  color: white;
+  color: #23B7D1;
 }
 
 #topbar .contact-info i {
-  color: #d9ba85;
+  color: whitesmoke;
   padding-right: 4px;
 }
 
@@ -223,19 +223,19 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: white;
+  color: #23B7D1;
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #d9ba85;
+  color: whitesmoke;
 }
 
 .nav-menu .book-a-table a {
-  border: 2px solid #cda45e;
-  color: #fff;
+  border: 2px solid whitesmoke;
+  color: #23B7D1;
   border-radius: 50px;
   padding: 8px 25px;
   text-transform: uppercase;
@@ -246,8 +246,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .book-a-table a:hover {
-  background: #cda45e;
-  color: #fff;
+  background: #23B7D1;
+  color: whitesmoke;
 }
 
 .nav-menu .drop-down ul {
@@ -479,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/acua/desayunofiesta.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -510,16 +510,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: whitesmoke;
   font-family: "Poppins", sans-serif;
 }
 
 #hero h1 span {
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 #hero h2 {
-  color: #eee;
+  color: whitesmoke;
   margin-bottom: 10px 0 0 0;
   font-size: 22px;
 }
@@ -538,13 +538,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
-  color: white;
-  border: 2px solid #cda45e;
+  color: #23B7D1;
+  border: 2px solid whitesmoke;
 }
 
 #hero .btn-menu:hover, #hero .btn-book:hover {
-  background: #cda45e;
-  color: #fff;
+  background: #23B7D1;
+  color: whitesmoke;
 }
 
 #hero .btn-book {
@@ -554,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
+  background: radial-gradient(#23B7D1 50%, rgba(205, 164, 94, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -571,7 +571,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid whitesmoke;
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -593,14 +593,14 @@ h1, h2, h3, h4, h5, h6 {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(205, 164, 94, 0.7);
+  border: 5px solid #EC262B(205, 164, 94, 0.7);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: #EC262B(198, 16, 0, 0);
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid #cda45e;
+  border-left: 15px solid #23B7D1;
   transform: scale(20);
 }
 
@@ -701,7 +701,7 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: whitesmoke;
   font-family: "Poppins", sans-serif;
 }
 
@@ -720,7 +720,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 /*--------------------------------------------------------------
@@ -814,8 +814,8 @@ section {
   height: 60px;
   z-index: 1;
   content: '';
-  border-left: 5px solid #cda45e;
-  border-top: 5px solid #cda45e;
+  border-left: 5px solid whitesmoke;
+  border-top: 5px solid whitesmoke;
   transition: .5s;
 }
 
@@ -827,8 +827,8 @@ section {
   height: 60px;
   z-index: 2;
   content: '';
-  border-right: 5px solid #cda45e;
-  border-bottom: 5px solid #cda45e;
+  border-right: 5px solid whitesmoke;
+  border-bottom: 5px solid whitesmoke;
   transition: .5s;
 }
 
@@ -863,7 +863,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 .about .content p:last-child {
@@ -890,7 +890,7 @@ section {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 .why-us .box h4 {
@@ -898,24 +898,24 @@ section {
   font-weight: 600;
   padding: 0;
   margin: 20px 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: whitesmoke(255, 255, 255, 0.8);
 }
 
 .why-us .box p {
-  color: #aaaaaa;
+  color: whitesmoke;
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
 
 .why-us .box:hover {
-  background: #cda45e;
+  background: #23B7D1;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
 .why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
-  color: #fff;
+  color: whitesmoke;
 }
 
 /*--------------------------------------------------------------
@@ -936,7 +936,7 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
-  color: #fff;
+  color: #23B7D1;
   margin-bottom: 10px;
   transition: all ease-in-out 0.3s;
   border-radius: 50px;
@@ -944,7 +944,7 @@ section {
 }
 
 .menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
-  color: #cda45e;
+  color: whitesmoke;
 }
 
 .menu #menu-flters li:last-child {
@@ -989,12 +989,12 @@ section {
   position: relative;
   z-index: 3;
   font-weight: 700;
-  color: white;
+  color: #23B7D1;
   transition: 0.3s;
 }
 
 .menu .menu-content a:hover {
-  color: #cda45e;
+  color: whitesmoke;
 }
 
 .menu .menu-content span {
@@ -1003,14 +1003,14 @@ section {
   z-index: 3;
   padding: 0 10px;
   font-weight: 600;
-  color: #cda45e;
+  color: white;
 }
 
 .menu .menu-ingredients {
   margin-left: 85px;
   font-style: italic;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "opensans", sans-serif;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1029,25 +1029,25 @@ section {
   border: 0;
   padding: 12px 15px;
   transition: 0.3s;
-  color: #fff;
+  color: white;
   border-radius: 0;
-  border-right: 2px solid #cda45e;
+  border-right: 2px solid white;
   font-weight: 600;
   font-size: 15px;
 }
 
 .specials .nav-link:hover {
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 .specials .nav-link.active {
   color: #1a1814;
-  background: #cda45e;
-  border-color: #cda45e;
+  background: #23B7D1;
+  border-color: white;
 }
 
 .specials .nav-link:hover {
-  border-color: #cda45e;
+  border-color: #23B7D1;
 }
 
 .specials .tab-pane.active {
@@ -1059,11 +1059,11 @@ section {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #fff;
+  color: white;
 }
 
 .specials .details p {
-  color: #aaaaaa;
+  color: whitesmoke;
 }
 
 .specials .details p:last-child {
@@ -1097,7 +1097,7 @@ section {
 }
 
 .events .section-title h2 {
-  color: #fff;
+  color: white;
 }
 
 .events .container {
@@ -1116,13 +1116,13 @@ section {
 }
 
 .events .event-item {
-  color: #fff;
+  color: whitesmoke;
 }
 
 .events .event-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #cda45e;
+  color: white;
 }
 
 .events .event-item .price {
@@ -1148,7 +1148,7 @@ section {
 .events .event-item ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #23B7D1;
 }
 
 .events .event-item p:last-child {
@@ -1166,11 +1166,11 @@ section {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ddd !important;
+  background-color: white !important;
 }
 
 .events .owl-dot.active {
-  background-color: #cda45e !important;
+  background-color: #23B7D1 !important;
 }
 
 @media (min-width: 992px) {
@@ -1265,7 +1265,7 @@ section {
 }
 
 .book-a-table .php-email-form input:focus, .book-a-table .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #23B7D1;
 }
 
 .book-a-table .php-email-form input {
@@ -1277,16 +1277,16 @@ section {
 }
 
 .book-a-table .php-email-form button[type="submit"] {
-  background: #cda45e;
+  background: #23B7D1;
   border: 0;
   padding: 10px 35px;
-  color: #fff;
+  color: white;
   transition: 0.4s;
   border-radius: 50px;
 }
 
 .book-a-table .php-email-form button[type="submit"]:hover {
-  background: #d3af71;
+  background: #23B7D1;
 }
 
 /*--------------------------------------------------------------
@@ -1377,8 +1377,8 @@ section {
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 3px solid #454035;
-  border-bottom: 3px solid #454035;
+  border-right: 3px solid #23B7D1;
+  border-bottom: 3px solid #23B7D1;
 }
 
 .gallery .gallery-item img {
@@ -1486,7 +1486,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #cda45e;
+  background: #23B7D1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1506,7 +1506,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #bab3a6;
+  color: whitesmoke;
 }
 
 .contact .info .open-hours, .contact .info .email, .contact .info .phone {
@@ -1560,7 +1560,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
+  border: 3px solid #23B7D1;
   border-top-color: #1a1814;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -1596,7 +1596,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #23B7D1;
 }
 
 .contact .php-email-form input {
@@ -1608,7 +1608,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #cda45e;
+  background: #23B7D1;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1617,7 +1617,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #d3af71;
+  background: #23B7D1;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1644,7 +1644,7 @@ section {
 #footer {
   background: black;
   padding: 0 0 30px 0;
-  color: #fff;
+  color: #23B7D1;
   font-size: 14px;
 }
 
@@ -1674,14 +1674,14 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Playfair Display", serif;
-  color: #fff;
+  color: whitesmoke;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #28251f;
-  color: #fff;
+  color: #23B7D1;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1693,15 +1693,15 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #cda45e;
-  color: #fff;
+  background: #23B7D1;
+  color: white;
   text-decoration: none;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: #23B7D1;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1718,7 +1718,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #cda45e;
+  color: #15d84f;
   font-size: 18px;
   line-height: 1;
 }
@@ -1770,14 +1770,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #cda45e;
-  color: #fff;
+  background: #23B7D1;
+  color: white;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #d3af71;
+  background: #23B7D1;
 }
 
 #footer .copyright {
@@ -1789,5 +1789,5 @@ section {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #fff;
+  color: whitesmoke;
 }
