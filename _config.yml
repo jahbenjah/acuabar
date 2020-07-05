@@ -53,8 +53,8 @@ defaults:
       lazy: true
       image:
         path: assets\img\acua\logo ACUA BAJA BAR Y MAR.png
-        height: Auto
-        width: Auto
+        height: 1200
+        width: 630
 
 
 
