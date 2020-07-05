@@ -53,5 +53,5 @@ defaults:
       lazy: true
       image:
         path: assets\img\acua\acuabajabar&mar.jpg
-        height: 3705
-        width: 5000
+        height: Auto
+        width: Auto
