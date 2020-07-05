@@ -2,7 +2,10 @@
 title: Acua
 email: Acua@acuabar.com
 description: >- 
-  
+  Acua Baja Bar & Mar
+  Restaurante-Bar con un gran ambiente y comida de la mejor calidad.
+  Clientes contentos siempre.
+
 baseurl: ""
 url: "https://acuabar.com/" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-162867542-4
@@ -40,3 +43,15 @@ exclude:
   - package.json
   - gulpfile.js
   - img-temp/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: "es"
+      lazy: true
+      image:
+        path: assets\img\acua\acuabajabar&mar.jpg
+        height: 3705
+        width: 5000
