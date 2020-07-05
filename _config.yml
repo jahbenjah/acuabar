@@ -52,6 +52,9 @@ defaults:
       lang: "es"
       lazy: true
       image:
-        path: assets\img\acua\acuabajabar&mar.jpg
+        path: assets\img\acua\logo ACUA BAJA BAR Y MAR.png
         height: Auto
         width: Auto
+
+
+
