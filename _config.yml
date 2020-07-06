@@ -49,10 +49,10 @@ defaults:
     scope:
       path: ""
     values:
-      lang: "en"
+      lang: "en_us"
       lazy: true
       image:
-        path: /assets/img/acua/android-chrome-512x512.png
+        path: /assets/img/acua/logooriginalacua.png
         height: 512
         width: 512
 
