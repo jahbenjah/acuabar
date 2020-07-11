@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", ;
   background: #0c0b09;
   color: #fff;
 }
@@ -24,7 +24,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", ;
 }
 
 /*--------------------------------------------------------------
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", ;
 }
 
 #header .logo a {
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #23B7D1;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", ;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -511,7 +511,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   color: whitesmoke;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 #hero h1 span {
@@ -702,7 +702,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: whitesmoke;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 .section-title h2::after {
@@ -719,7 +719,7 @@ section {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins";
   color: #23B7D1;
 }
 
@@ -940,7 +940,7 @@ section {
   margin-bottom: 10px;
   transition: all ease-in-out 0.3s;
   border-radius: 50px;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", ;
 }
 
 .menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
@@ -980,7 +980,7 @@ section {
   top: -4px;
   z-index: 1;
   color: #bab3a6;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, ;
 }
 
 .menu .menu-content a {
@@ -1010,7 +1010,7 @@ section {
   margin-left: 85px;
   font-style: italic;
   font-size: 14px;
-  font-family: "opensans", sans-serif;
+  font-family: "opensans",;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1127,7 +1127,7 @@ section {
 
 .events .event-item .price {
   font-size: 26px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans",;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -1499,7 +1499,7 @@ section {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins",;
 }
 
 .contact .info p {
@@ -1666,14 +1666,14 @@ section {
   line-height: 1;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins",;
 }
 
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display",;
   color: whitesmoke;
 }
 
