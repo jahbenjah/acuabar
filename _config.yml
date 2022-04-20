@@ -1,7 +1,8 @@
 # set JEKYLL_ENV=production | bundle exec jekyll build
 # Site settings
 title: Acua
-email: Acua@acuabar.com
+email: contacto@acuabar.com
+phone: +52 661 112 2342
 description: >- 
   Acua Baja Bar & Mar
   Restaurante-Bar con un gran ambiente y comida de la mejor calidad.
