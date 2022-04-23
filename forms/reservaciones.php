@@ -14,7 +14,7 @@ require("../lib/PHPMailer/src/SMTP.php");
  $mail->Username = "contacto@acuabar.com";
  $mail->Password = "Rosaritocentro1";
  $mail->SetFrom("contacto@acuabar.com");
- $mail->Subject = "Reservación : Desde Mi pagina web";
+ $mail->Subject = "Reservacion : Desde Mi pagina web";
  
  $name = $_POST['name'];
  $email = $_POST['email'];
@@ -24,7 +24,7 @@ require("../lib/PHPMailer/src/SMTP.php");
  $people = $_POST['people'];
  $message = $_POST['message'];
  
- $mail->Body = "Nombre: {$name} <br> Email: {$email} <br> Telefono : {$phone} <br> Fecha : {$date} <br> Hora : {$time} <br> Hora : {$time} <br> Personas : {$people} <br> Mensaje : {$message}";
+ $mail->Body = "Nombre: {$name} <br> Email: {$email} <br> Telefono : {$phone} <br> Fecha : {$date} <br> Hora : {$time} <br> Personas : {$people} <br> Mensaje : {$message}";
  $mail->AddAddress("contacto@acuabar.com");
  if(!$mail->Send()) {
  echo "Mailer Error: " . $mail->ErrorInfo;
