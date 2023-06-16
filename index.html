@@ -46,6 +46,12 @@
   <!-- Template Main CSS File -->
   <link defer async href="assets/css/style.min.css" rel="stylesheet">
 
+  <script>
+    function onSubmit(token) {
+      document.getElementById("book-a-table").submit();
+    }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {%- if jekyll.environment == 'production' -%}
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=UA-162867542-4"></script>
@@ -1168,7 +1174,10 @@ We are the best choice!
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your
               reservation. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Book a Table</button></div>
+          <div class="text-center"><button type="submit" class="g-recaptcha" 
+            data-sitekey="6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX" 
+            data-callback='onSubmit' 
+            data-action='submit'>Book a Table</button></div>
         </form>
 
       </div>
@@ -1505,6 +1514,8 @@ We are the best choice!
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
