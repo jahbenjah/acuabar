@@ -12,7 +12,7 @@ require("../lib/PHPMailer/src/SMTP.php");
  $mail->Port = 465; //465  or 587
  $mail->IsHTML(true);
  $mail->Username = "contacto@acuabar.com";
- $mail->Password = "Rosaritocentro1";
+ $mail->Password = "AcuaBajaBar&Mar";
  $mail->SetFrom("contacto@acuabar.com");
  $mail->Subject = "Reservacion : Desde Mi pagina web";
  
