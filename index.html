@@ -1125,7 +1125,7 @@ We are the best choice!
           <p>Book a Table</p>
         </div>
 
-        <form id="contactform" action="/forms/reservaciones.php" method="post" class="php-email-form" data-aos="fade-up"
+        <form id="contact-form" action="/forms/reservaciones.php" method="post" class="php-email-form" data-aos="fade-up"
           data-aos-delay="100">
           <div class="form-row">
             <div class="col-lg-4 col-md-6 form-group">
@@ -1409,7 +1409,7 @@ We are the best choice!
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form id="contactform" action="/forms/enviarcorreo.php" method="post" class="php-email-form">
+            <form id="contact-form" action="/forms/enviarcorreo.php" method="post" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -1521,15 +1521,15 @@ We are the best choice!
   <script src="assets/js/main.min.js"></script>
 
   <script>
-    $('#formacontacto').submit(function(event) {
+    $('#contact-form').submit(function(event) {
         event.preventDefault();
         var email = $('#email').val();
  
         grecaptcha.ready(function() {
             grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: 'sendemail'}).then(function(token) {
-                $('#contactform').prepend('<input type="hidden" name="token" value="' + token + '">');
-                $('#contactform').prepend('<input type="hidden" name="action" value="sendemail">');
-                //$('#formacontacto').unbind('submit').submit();
+                $('#contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#contact-form').prepend('<input type="hidden" name="action" value="sendemail">');
+                //$('#contact-form').unbind('submit').submit();
             });;
         });
   });
