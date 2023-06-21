@@ -45,11 +45,7 @@
   <!-- Template Main CSS File -->
   <link defer async href="assets/css/style.min.css" rel="stylesheet">
 
-  <script>
-    function onSubmit(token) {
-      document.getElementById("book-a-table").submit();
-    }
-  </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {%- if jekyll.environment == 'production' -%}
@@ -1129,7 +1125,7 @@ We are the best choice!
           <p>Book a Table</p>
         </div>
 
-        <form action="/forms/reservaciones.php" method="post" class="php-email-form" data-aos="fade-up"
+        <form id="contactform" action="/forms/reservaciones.php" method="post" class="php-email-form" data-aos="fade-up"
           data-aos-delay="100">
           <div class="form-row">
             <div class="col-lg-4 col-md-6 form-group">
@@ -1173,7 +1169,6 @@ We are the best choice!
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your
               reservation. Thank you!</div>
           </div>
-          <div class="g-recaptcha" data-sitekey="6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX"></div>
           <div class="text-center"><button type="submit">Book a Table</button></div>
         </form>
 
@@ -1414,7 +1409,7 @@ We are the best choice!
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="/forms/enviarcorreo.php" method="post" class="php-email-form">
+            <form id="contactform" action="/forms/enviarcorreo.php" method="post" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -1442,7 +1437,6 @@ We are the best choice!
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="g-recaptcha" data-sitekey="6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX"></div>
               <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
 
@@ -1513,8 +1507,6 @@ We are the best choice!
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1527,6 +1519,21 @@ We are the best choice!
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.min.js"></script>
+
+  <script>
+    $('#formacontacto').submit(function(event) {
+        event.preventDefault();
+        var email = $('#email').val();
+ 
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: 'sendemail'}).then(function(token) {
+                $('#contactform').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#contactform').prepend('<input type="hidden" name="action" value="sendemail">');
+                //$('#formacontacto').unbind('submit').submit();
+            });;
+        });
+  });
+  </script>
 </body>
 
 </html>
