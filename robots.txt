@@ -1,4 +1,4 @@
-# Permitir explorar todo el contenido
+# Permitir explorar todo el contenido de la pagina
 User-agent: *
 Disallow:
 Sitemap: https://acuabar.com/sitemap.xml
