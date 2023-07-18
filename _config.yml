@@ -1,16 +1,15 @@
 # set JEKYLL_ENV=production | bundle exec jekyll build
 # Site settings
-title: Acua
+title: Acua Baja Bar & Mar
 email: contacto@acuabar.com
 phone: +52 661 112 2342
 description: >- 
   Acua Baja Bar & Mar
   Restaurante-Bar con un gran ambiente y comida de la mejor calidad.
   Clientes contentos siempre.
-
 baseurl: ""
 url: "https://acuabar.com/" # the base hostname & protocol for your site, e.g. http://example.com
-google_analytics: UA-162867542-4
+google_analytics: G-F1PPWVHENS
 lang: en_us
 
 minima:
@@ -21,6 +20,8 @@ social:
   links:
     - https://www.facebook.com/acuabajabarymar
     - https://www.instagram.com/acuabajamar/
+    - https://g.co/kgs/p3t2aX
+    - https://maps.app.goo.gl/JwdkBwk9qVBcsgVH6
 
 # Build settings
 plugins:
