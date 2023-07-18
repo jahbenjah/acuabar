@@ -203,8 +203,12 @@
       once: true
     });
   }
-  $(window).on('load', function() {
+
+  // Magnific Popup
+  $(window).on('load', function () {
     aos_init();
+    $('#promo').magnificPopup({ type: 'image' });
+    $('#promo').click();
   });
 
 })(jQuery);
