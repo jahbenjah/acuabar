@@ -55,7 +55,7 @@ defaults:
       lang: "en_us"
       lazy: true
       image:
-        path: /assets/img/acua/og512x512.png
+        path: /assets/img/acua/favicon/acua-og-img.webp
         height: 512
         width: 512
 

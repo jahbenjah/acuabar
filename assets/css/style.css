@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 100px;
+  max-height: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -779,7 +779,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/acua/acuabajabar&mar.jpg.webp") center center;
+  background: url("../img/acua/acua-baja-bar-&-mar-banner.webp") center center;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -1081,7 +1081,7 @@ section {
 # Events
 --------------------------------------------------------------*/
 .events {
-  background: url(../img/acua/acuaopen.jpg);
+  background: url(../img/acua/acuaopen.jpg.webp);
   background-size: cover;
   position: relative;
 }
