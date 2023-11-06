@@ -219,3 +219,60 @@ function validateNumber(input) {
   // Eliminar caracteres no numéricos
   input.value = input.value.replace(/[^0-9-]/g, '');
 }
+
+function createCookie(name, value, days) {
+  var expires = "";
+
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+$('#submitBooking').click(function(){
+  createCookie("humans_21909", "1", 1);
+  var name = $('input[name=nameBooking]');
+  var email = $('input[name=emailBooking]');
+  var countryCode = $('input[name=countryCodeBooking]');
+  var phone = $('input[name=phoneBooking]');
+  var date = $('input[name=dateBooking]');
+  var time = $('input[name=timeBooking]');
+  var party = $('input[name=partyBooking]');
+  var message = $('input[name=messageBooking]');
+
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: '/forms/reservaciones.php'}).then(function(token) {
+      console.log(token);
+      // Include the token in your form submission
+      var data = 'name=' + name.val() +
+        '&email=' + email.val() +
+        '&countryCode=' + countryCode.val() +
+        '&phone=' + phone.val() +
+        '&date=' + date.val() +
+        '&time=' + time.val() +
+        '&party=' + party.val() +
+        '&message=' + encodeURIComponent(message.val()) +
+        '&token=' + token;
+      
+      $.ajax({
+        url: "/forms/reservaciones.php",    
+        type: "POST",
+        xhrFields: {
+          withCredentials: true
+        },
+        data: data,        
+        cache: false,
+        success: function (msg) {
+          console.log(msg);
+        },
+        error: function (error) {
+        }
+      });
+    });
+  });
+  
+  return false;
+})

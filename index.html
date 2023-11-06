@@ -1149,16 +1149,16 @@
           <p>Book a Table</p>
         </div>
 
-        <form id="contact-form" action="/forms/reservaciones.php" method="post" class="php-email-form"
+        <form id="bookATableForm" action="/forms/reservaciones.php" method="post" class="php-email-form"
           data-aos="fade-up" data-aos-delay="100">
           <div class="form-row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+              <input type="text" name="nameBooking" class="form-control" id="nameBooking" placeholder="Your Name" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+              <input type="email" class="form-control" name="emailBooking" id="emailBooking" placeholder="Your Email"
                 data-rule="email" data-msg="Please enter a valid email">
               <div class="validate"></div>
             </div>
@@ -1170,7 +1170,7 @@
             <div class="col-lg-4 col-md-6 form-group w-100">
               <div class="d-flex align-items-center row w-100 m-0 ">
                 <div class="col-6 p-0 w-75 h-100">
-                  <select name="countryCode" id="" class="custom-select w-100">
+                  <select name="countryCodeBooking" id="countryCodeBooking" class="custom-select w-100">
                     <option data-countryCode="MX" value="52" Selected>Mexico (+52)</option>
                     <option data-countryCode="US" value="1">USA (+1)</option>
                     <optgroup label="Other countries">
@@ -1392,7 +1392,7 @@
                   </select>
                 </div>
                 <div class="col-6 p-0 m-0">
-                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" 
+                  <input type="tel" class="form-control" name="phoneBooking" id="phoneBooking" placeholder="Your Phone" 
                     pattern="[0-9]{10}" data-rule="minlen:10" data-msg="Please enter a valid phone number"
                     oninput="validateNumber(this)">
                 </div>
@@ -1400,23 +1400,23 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="date" name="date" class="form-control" id="date" placeholder="Date"
+              <input type="date" name="dateBooking" class="form-control" id="dateBooking" placeholder="Date"
                 data-rule="minlen:1" data-msg="Please enter a date">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="time" class="form-control" name="time" id="time" placeholder="Time"
+              <input type="time" class="form-control" name="timeBooking" id="timeBooking" placeholder="Time"
                 data-rule="minlen:1" data-msg="Please enter an hour">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" min="1"
+              <input type="number" class="form-control" name="partyBooking" id="partyBooking" placeholder="# of people" min="1"
                 data-rule="minlen:1" data-msg="Please enter at least 1">
               <div class="validate"></div>
             </div>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+            <textarea class="form-control" name="messageBooking" id="messageBooking" rows="5" placeholder="Message"></textarea>
             <div class="validate"></div>
           </div>
           <div class="mb-3">
@@ -1425,7 +1425,7 @@
             <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your
               reservation. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Book a Table</button></div>
+          <div class="text-center"><button id="submitBooking" type="submit">Book a Table</button></div>
         </form>
 
       </div>
@@ -1782,7 +1782,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.min.js"></script>
 
-  <script>
+  <!-- <script>
     $('#contact-form').submit(function (event) {
       event.preventDefault();
       var email = $('#email').val();
@@ -1795,7 +1795,7 @@
         });;
       });
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
