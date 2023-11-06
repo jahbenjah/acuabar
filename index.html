@@ -1400,17 +1400,18 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-msg="Please enter a valid date">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date"
+                data-rule="minlen:1" data-msg="Please enter a date">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="time" class="form-control" name="time" id="time" placeholder="Time" 
-                data-msg="Please enter at least 4 chars">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Time"
+                data-rule="minlen:1" data-msg="Please enter an hour">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
               <input type="number" class="form-control" name="people" id="people" placeholder="# of people" min="1"
-                data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                data-rule="minlen:1" data-msg="Please enter at least 1">
               <div class="validate"></div>
             </div>
           </div>
