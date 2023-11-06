@@ -18,13 +18,14 @@ require("../lib/PHPMailer/src/SMTP.php");
  
  $name = $_POST['name'];
  $email = $_POST['email'];
+ $country_code = $_POST['countryCode'];
  $phone = $_POST['phone'];
  $date = $_POST['date'];
  $time = $_POST['time'];
  $people = $_POST['people'];
  $message = $_POST['message'];
  
- $mail->Body = "Nombre: {$name} <br> Email: {$email} <br> Telefono : {$phone} <br> Fecha : {$date} <br> Hora : {$time} <br> Personas : {$people} <br> Mensaje : {$message}";
+ $mail->Body = "Nombre: {$name} <br> Email: {$email} <br> Telefono : (+{$country_code}) {$phone} <br> Fecha : {$date} <br> Hora : {$time} <br> Personas : {$people} <br> Mensaje : {$message}";
  $mail->AddAddress("contacto@acuabar.com");
  if(!$mail->Send()) {
  echo "Mailer Error: " . $mail->ErrorInfo;
