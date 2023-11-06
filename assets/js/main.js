@@ -130,6 +130,8 @@
     });
   });
 
+
+
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -212,3 +214,8 @@
   });
 
 })(jQuery);
+
+function validateNumber(input) {
+  // Eliminar caracteres no numéricos
+  input.value = input.value.replace(/[^0-9-]/g, '');
+}

@@ -1395,12 +1395,6 @@
                   <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" 
                     pattern="[0-9]{10}" data-rule="minlen:10" data-msg="Please enter a valid phone number"
                     oninput="validateNumber(this)">
-                    <script>
-                      function validateNumber(input) {
-                          // Eliminar caracteres no numéricos
-                          input.value = input.value.replace(/[^0-9-]/g, '');
-                      }
-                  </script>
                 </div>
               </div>
               <div class="validate"></div>
