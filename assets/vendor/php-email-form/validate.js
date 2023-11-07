@@ -1,6 +1,18 @@
 jQuery(document).ready(function ($) {
   "use strict";
 
+  function createCookie(name, value, days) {
+    var expires = "";
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
   //Contact
   $('form.php-email-form').submit(function () {
 
@@ -104,26 +116,38 @@ jQuery(document).ready(function ($) {
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
-
-    var jqxhr = $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      crossDomain:true
-    })
-      .done(function () {
-        this_form.find('.loading').slideUp();
-        this_form.find('.sent-message').slideDown();
-        this_form.find("input:not(input[type=submit]), textarea").val('');
-      })
-      .fail(function () {
-        this_form.find('.loading').slideUp();
-        this_form.find('.sent-message').slideDown();
-        this_form.find("input:not(input[type=submit]), textarea").val('');
-        // this_form.find('.loading').slideUp();
-        // this_form.find('.error-message').slideDown().html("Error");
-      });
-    return false;
+    createCookie("humans_21909", "1", 1);
+    console.log(action);
+    //probably i could add the captcha here
+    grecaptcha.ready(function() {
+			grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: action}).then(function(token) {
+        str = str+'&token=' + token;
+        console.log(str);
+        var jqxhr = $.ajax({
+          type: "POST",
+          url: action,
+          data: str,
+          crossDomain:true,
+          xhrFields: {
+						withCredentials: true
+					},
+        })
+          .done(function () {
+            this_form.find('.loading').slideUp();
+            this_form.find('.sent-message').slideDown();
+            this_form.find("input:not(input[type=submit]), textarea").val('');
+          })
+          .fail(function () {
+            this_form.find('.loading').slideUp();
+            this_form.find('.sent-message').slideDown();
+            this_form.find("input:not(input[type=submit]), textarea").val('');
+            // this_form.find('.loading').slideUp();
+            // this_form.find('.error-message').slideDown().html("Error");
+          });
+			});
+		});
+		
+		return false;
   });
 
 });
