@@ -1236,7 +1236,7 @@ section {
 }
 
 .book-a-table .php-email-form input, .book-a-table .php-email-form textarea {
-  border-radius: 0;
+  border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
   background: white;
