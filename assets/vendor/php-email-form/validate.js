@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
     console.log(action);
     //probably i could add the captcha here
     grecaptcha.ready(function() {
-			grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: action}).then(function(token) {
+			grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: 'reservaciones'}).then(function(token) {
         str = str+'&token=' + token;
         console.log(str);
         var jqxhr = $.ajax({
