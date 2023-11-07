@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -1374,7 +1375,7 @@
             </div>
             <div class="col-lg-4 col-md-6 form-group">
               <input type="date" name="date" class="form-control" id="date" placeholder="Fecha" 
-                data-rule="minlen:1" data-msg="Por favor ingrese una fecha">
+                data-rule="minlen:1" data-msg="Por favor ingrese una fecha" min="<?= date('Y-m-d') ?>">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
@@ -1382,6 +1383,32 @@
               data-rule="minlen:1" data-msg="Por favor ingrese una hora">
               <div class="validate"></div>
             </div>
+            <script>
+              $(document).ready(function() {
+            var fechaInput = $('#date');
+            var horaInput = $('#time');
+
+            fechaInput.attr('min', getCurrentDate());
+
+            horaInput.on('change', function() {
+                var selectedHour = parseInt($(this).val().split(':')[0]);
+                if ((selectedHour >= 2 && selectedHour < 8)) {
+                  
+                    alert('Por favor, selecciona una hora entre las 8 am y las 2 am.');
+                    $(this).val('');
+                }
+            });
+
+            function getCurrentDate() {
+                var today = new Date();
+                var year = today.getFullYear();
+                var month = (today.getMonth() + 1).toString().padStart(2, '0');
+                var day = today.getDate().toString().padStart(2, '0');
+
+                return `${year}-${month}-${day}`;
+            }
+        });
+            </script>
             <div class="col-lg-4 col-md-6 form-group">
               <input type="number" class="form-control" name="people" id="people" placeholder="# de personas"
                 data-rule="minlen:1" data-msg="Por favor ingresa por lo menos 1">
