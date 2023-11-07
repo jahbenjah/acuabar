@@ -30,6 +30,7 @@ require("../lib/PHPMailer/src/SMTP.php");
  if(!$mail->Send()) {
  echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
+    exit;
  echo "OK";
  }
 
