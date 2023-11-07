@@ -16,6 +16,31 @@
     }
   });
 
+  $(document).ready(function() {
+    var fechaInput = $('#date');
+    var horaInput = $('#time');
+
+    fechaInput.attr('min', getCurrentDate());
+
+    horaInput.on('change', function() {
+        var selectedHour = parseInt($(this).val().split(':')[0]);
+        if ((selectedHour >= 2 && selectedHour < 8)) {
+          
+            alert('Please select a time between 8 am and 2 am.');
+            $(this).val('');
+        }
+    });
+
+    function getCurrentDate() {
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1).toString().padStart(2, '0');
+        var day = today.getDate().toString().padStart(2, '0');
+
+        return `${year}-${month}-${day}`;
+    }
+});
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
