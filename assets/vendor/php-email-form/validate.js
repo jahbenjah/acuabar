@@ -117,12 +117,10 @@ jQuery(document).ready(function ($) {
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
     createCookie("humans_21909", "1", 1);
-    console.log(action);
     //probably i could add the captcha here
     grecaptcha.ready(function() {
 			grecaptcha.execute('6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX', {action: 'reservaciones'}).then(function(token) {
         str = str+'&token=' + token;
-        console.log(str);
         var jqxhr = $.ajax({
           type: "POST",
           url: action,
