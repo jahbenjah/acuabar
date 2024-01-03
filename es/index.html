@@ -133,6 +133,15 @@
 </head>
 
 <body>
+  <div class="overlay" id="overlay">
+    <!-- Popup Container -->
+    <div id="popup-container">
+      <!-- Close button -->
+      <span id="close-popup">&times;</span>
+      <!-- Image in the popup -->
+      <img src="../assets/img/acua/pinkParty_ES.webp" alt="Popup Image" id="popup-content">
+    </div>
+  </div>
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex">
@@ -964,7 +973,7 @@
           <div class="col-lg-9 mt-4 mt-lg-0">
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-0">
-                <div class="row"> 
+                <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Tragos de cortesia* para todas las mujeres </h3>
                     <p class="font-italic">Ven a divertirte a nuestra noche de chicas</p>
@@ -984,7 +993,8 @@
                     <p>Disponible de!!! 8:00 am a 12:00 pm!!!</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="/assets/img/acua/promos/5-dlls-desayuno-acua.jpg.webp" alt="$5 dlls Desayuno" class="img-fluid">
+                    <img src="/assets/img/acua/promos/5-dlls-desayuno-acua.jpg.webp" alt="$5 dlls Desayuno"
+                      class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -1019,7 +1029,7 @@
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Deasayuno 2x1</h3>
                     <p class="font-italic">Nuestro 2x1 en desayunos para damas!!!
-                      </p>
+                    </p>
                     <p>Valido desde!!! 8:00 am a 12:00 pm!!! </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -1382,21 +1392,21 @@
                   </select>
                 </div>
                 <div class="col-6 p-0 m-0">
-                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Num. Teléfono" 
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Num. Teléfono"
                     pattern="[0-9]{10}" data-rule="minlen:10" data-msg="Por favor ingrese un numero valido"
                     oninput="validateNumber(this)">
                 </div>
               </div>
-              <div class="validate"></div> 
-            </div>
-            <div class="col-lg-4 col-md-6 form-group">
-              <input type="date" name="date" class="form-control" id="date" placeholder="Fecha" 
-                data-rule="minlen:1" data-msg="Por favor ingrese una fecha" min="<?= date('Y-m-d') ?>">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="time" class="form-control" name="time" id="time" placeholder="Hora"
-              data-rule="minlen:1" data-msg="Por favor ingrese una hora">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Fecha" data-rule="minlen:1"
+                data-msg="Por favor ingrese una fecha" min="<?= date('Y-m-d') ?>">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Hora" data-rule="minlen:1"
+                data-msg="Por favor ingrese una hora">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
@@ -1717,8 +1727,7 @@
                 <a href="https://www.facebook.com/acuabajabarymar" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/acuabajabarymar/" class="instagram"><i
                     class="bx bxl-instagram"></i></a>
-                <a href="https://wa.me/message/ITWMRWTEB5I5E1" class="whatsapp"><i
-                    class="bx bxl-whatsapp"></i></a>
+                <a href="https://wa.me/message/ITWMRWTEB5I5E1" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
               </div>
             </div>
           </div>
