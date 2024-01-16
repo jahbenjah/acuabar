@@ -22,7 +22,19 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
-  z-index: 99999; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
+  z-index: 10000; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
+  justify-content: center;
+  align-items: center;
+}
+.overlay2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  z-index: 10002; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
   justify-content: center;
   align-items: center;
 }
@@ -38,7 +50,19 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 1px;
   text-align: center;
-  z-index: 999999; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
+  z-index: 10001; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
+}
+#popup-container2 {
+  display: none;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1px;
+  text-align: center;
+  z-index: 10003; /* Asegúrate de que este valor sea mayor que cualquier otro z-index en tu página */
 }
 
 /* Close Button Styles */
@@ -50,9 +74,21 @@ body {
   cursor: pointer;
   color: red; /* Color rojo para el botón de cerrar */
 }
+#close-popup2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  color: red; /* Color rojo para el botón de cerrar */
+}
 
 /* Estilo adicional para el contenido del popup */
 #popup-content {
+  max-width: 100%;
+  max-height: 100vh; /* El 100% de la altura visible del dispositivo */
+}
+#popup-content2 {
   max-width: 100%;
   max-height: 100vh; /* El 100% de la altura visible del dispositivo */
 }
