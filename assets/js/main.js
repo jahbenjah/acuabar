@@ -17,15 +17,10 @@
     var overlay = document.getElementById('overlay');
     var popupContainer = document.getElementById('popup-container');
     var closePopup = document.getElementById('close-popup');
-    var overlay2 = document.getElementById('overlay2');
-    var popupContainer2 = document.getElementById('popup-container2');
-    var closePopup2 = document.getElementById('close-popup2');
 
     // Mostrar overlay y popup después de cargar la página
     overlay.style.display = 'flex';
     popupContainer.style.display = 'flex';
-    overlay2.style.display = 'flex';
-    popupContainer2.style.display = 'flex';
 
     // Cerrar popup cuando se hace clic en el botón de cerrar o en el overlay
     closePopup.addEventListener('click', function() {
@@ -38,15 +33,6 @@
         popupContainer.style.display = 'none';
     });
 
-      closePopup2.addEventListener('click', function() {
-        overlay2.style.display = 'none';
-        popupContainer2.style.display = 'none';
-    });
-
-    overlay2.addEventListener('click', function() {
-        overlay2.style.display = 'none';
-        popupContainer2.style.display = 'none';
-    });
   });
 
   $(document).ready(function() {
