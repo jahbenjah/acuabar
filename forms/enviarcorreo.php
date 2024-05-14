@@ -12,7 +12,7 @@ require("../lib/PHPMailer/src/SMTP.php");
  $mail->Port = 465; //465  or 587
  $mail->IsHTML(true);
  $mail->Username = "contacto@acuabar.com";
- $mail->Password = "AcuaBajaBar&Mar";
+ $mail->Password = "Acu@B@j@B@r&M@r";
  $mail->SetFrom("contacto@acuabar.com");
  $mail->Subject = "Contacto Desde : Mi pagina web";
  
@@ -28,5 +28,18 @@ require("../lib/PHPMailer/src/SMTP.php");
  } else {
  echo "OK";
  }
+
+$recaptcha_secret = '6LefNqAmAAAAAJmeBNJ02cGiudKn9A9nTQP9iEL6';
+$recaptcha_response = $_POST['token'];
+
+if(!$recaptcha_response){
+    error_log("ocurrio un error al obtener el token de captcha");
+}
+
+$url = 'https://www.google.com/recaptcha/api/siteverify';
+$data = [
+    'secret' => $recaptcha_secret,
+    'response' => $recaptcha_response,
+];
 
  ?>

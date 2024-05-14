@@ -12,7 +12,7 @@ $mail->Host = "mail.acuabar.com";
 $mail->Port = 465; //465  or 587
 $mail->IsHTML(true);
 $mail->Username = "contacto@acuabar.com";
-$mail->Password = "AcuaBajaBar&Mar";
+$mail->Password = "Acu@B@j@B@r&M@r";
 $mail->SetFrom("contacto@acuabar.com");
 $mail->Subject = "Reservacion : Desde Mi pagina web";
 
