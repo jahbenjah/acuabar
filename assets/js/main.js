@@ -250,12 +250,12 @@
     });
   }
 
-  // Magnific Popup
-  $(window).on('load', function () {
-    aos_init();
-    $('#promo').magnificPopup({ type: 'image' });
-    $('#promo').click();
-  });
+  // // Magnific Popup
+  // $(window).on('load', function () {
+  //   aos_init();
+  //   $('#promo').magnificPopup({ type: 'image' });
+  //   $('#promo').click();
+  // });
 
 })(jQuery);
 
