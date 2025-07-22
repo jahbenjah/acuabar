@@ -47,8 +47,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link defer async href="assets/css/style.min.css" rel="stylesheet">
-
+  <link href="assets/css/style.min.css" rel="stylesheet">
   <script src="https://www.google.com/recaptcha/api.js?render=6LefNqAmAAAAAE3mn9MNEdLb22an8jrt5OMur0MX"></script>
 
   <!-- Google tag (gtag.js) -->
@@ -221,7 +220,7 @@
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
-              <img src="assets/img/acua/_DSC6759-Mejorado-NR.png" alt="Acua Street Sight" lazyload="lazy">
+              <img src="assets/img/acua/_DSC6759-Mejorado-NR.png" alt="Acua Street Sight" loading="lazy">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -998,8 +997,7 @@
               <div class="tab-pane" id="tab-2">
                 <div class="row specials">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Desayunos Especiales 5 Dlls</h3>
-                    </p>
+                    <h3>Desayunos Especiales 5 Dlls</h3>         
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="../assets/img/acua/promos/5-dlls-desayuno-acua.jpg.webp" alt="BreakFast 5 Dollars" class="img-fluid">
@@ -1074,7 +1072,7 @@
 
           <div class="row event-item">
             <div class="col-lg-6">
-              <img src="assets\img\acua\bar.jpg.webp" class="img-fluid" alt="">
+              <img src="assets/img/acua/bar.jpg.webp" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
               <h3>Custom Parties</h3>
@@ -1133,7 +1131,7 @@
             <div class="col-lg-4 col-md-6 form-group w-100">
               <div class="d-flex align-items-center row w-100 m-0 ">
                 <div class="col-6 pl-0 pr-1 w-75 h-100">
-                  <select name="countryCode" id="" class="custom-select w-100">
+                  <select name="countryCode" id="countryCode" title="Country Code" class="custom-select w-100">
                     <option data-countryCode="MX" value="52" Selected>Mexico (+52)</option>
                     <option data-countryCode="US" value="1">USA (+1)</option>
                     <optgroup label="Other countries">
@@ -1368,7 +1366,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="time" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:1"
+              <input type="time" class="form-control" name="time" id="time" data-rule="minlen:1"
                 data-msg="Please enter an hour">
               <div class="validate"></div>
             </div>
@@ -1599,7 +1597,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form id="contact-form" action="/forms/enviarcorreo.php" method="post" class="php-email-form">
+            <form id="contact-form-2" action="/forms/enviarcorreo.php" method="post" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
