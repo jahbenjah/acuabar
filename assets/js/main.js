@@ -19,8 +19,8 @@
     var closePopup = document.getElementById('close-popup');
 
     // Mostrar overlay y popup después de cargar la página
-    // overlay.style.display = 'flex';
-    // popupContainer.style.display = 'flex';
+     overlay.style.display = 'flex';
+     popupContainer.style.display = 'flex';
 
     // Cerrar popup cuando se hace clic en el botón de cerrar o en el overlay
     closePopup.addEventListener('click', function() {
