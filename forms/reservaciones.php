@@ -12,9 +12,9 @@ $mail->Host = "mail.acuabar.com";
 $mail->Port = 465; //465  or 587
 $mail->IsHTML(true);
 $mail->Username = "contacto@acuabar.com";
-$mail->Password = "Acu@B@j@B@r&M@r";
+$mail->Password = "@cu@B@j@B@r&M@r";
 $mail->SetFrom("contacto@acuabar.com");
-$mail->Subject = "Reservacion : Desde Mi pagina web";
+$mail->Subject = "Reservacion Desde : Mi Sitio Web";
 
 $name = $_POST['name'];
 $email = $_POST['email'];
