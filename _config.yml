@@ -2,8 +2,8 @@
 # Site settings
 title: Acua Baja Bar & Mar
 email: contacto@acuabar.com
-phone: +52 661 112 2342
-description: >- 
+phone: +52 661 130 5944
+description: >-  
   Acua Baja Bar & Mar
   Restaurante-Bar con un gran ambiente y comida de la mejor calidad.
   Clientes contentos siempre.
@@ -55,9 +55,9 @@ defaults:
       lang: "en_us"
       lazy: true
       image:
-        path: /assets/img/favicon/acua-og-img.webp
-        height: 512
-        width: 512
+        path: /assets/img/favicon/acua-ogimg.webp
+        height: 192
+        width: 192
 
 
 
