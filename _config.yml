@@ -33,6 +33,9 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - .github
+  - .impeccable/
+  - DESIGN.md
+  - PRODUCT.md
   - gemfiles/
   - Gemfile
   - Gemfile.lock

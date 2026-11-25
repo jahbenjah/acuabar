@@ -2,11 +2,16 @@
 RewriteEngine on
 
 RewriteOptions inherit
-RewriteCond %{HTTPS} off
+RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^acuabar\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.acuabar\.com$
-RewriteRule ^/?$ "https\:\/\/acuabar\.com\/" [R=301,L]
+RewriteRule ^ https://acuabar.com%{REQUEST_URI} [R=301,L,NE]
+
+RewriteCond %{HTTP_HOST} ^www\.acuabar\.com$ [NC]
+RewriteRule ^ https://acuabar.com%{REQUEST_URI} [R=301,L,NE]
+
+<FilesMatch "^\.env">
+  Require all denied
+</FilesMatch>
 
 
 # php -- BEGIN cPanel-generated handler, do not edit
