@@ -1,68 +1,55 @@
 <?php
 
-require("../lib/PHPMailer/src/PHPMailer.php");
-require("../lib/PHPMailer/src/SMTP.php");
+require_once __DIR__ . '/_support.php';
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-$mail->IsSMTP(); // enable SMTP
-$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = "mail.acuabar.com";
-$mail->Port = 465; //465  or 587
-$mail->IsHTML(true);
-$mail->Username = "contacto@acuabar.com";
-$mail->Password = "@cu@B@j@B@r&M@r";
-$mail->SetFrom("contacto@acuabar.com");
-$mail->Subject = "Reservacion Desde : Mi Sitio Web";
+try {
+    $name = post_value('name');
+    $email = filter_var(post_value('email'), FILTER_VALIDATE_EMAIL);
+    $phone = post_value('phone');
+    $date = post_value('date');
+    $time = post_value('time');
+    $people = filter_var(post_value('people'), FILTER_VALIDATE_INT, [
+        'options' => ['min_range' => 1],
+    ]);
+    $message = post_value('message');
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$country_code = $_POST['countryCode'];
-$phone = $_POST['phone'];
-$date = $_POST['date'];
-$time = $_POST['time'];
-$people = $_POST['people'];
-$message = $_POST['message'];
+    $reservationDate = DateTimeImmutable::createFromFormat('!Y-m-d', $date);
+    $validDate = $reservationDate !== false
+        && $reservationDate->format('Y-m-d') === $date
+        && $reservationDate >= new DateTimeImmutable('today');
+    $validTime = preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', $time) === 1;
+    $hour = $validTime ? (int) substr($time, 0, 2) : -1;
+    $withinBusinessHours = $hour >= 8 || $hour < 2;
 
-$recaptcha_secret = '6LefNqAmAAAAAJmeBNJ02cGiudKn9A9nTQP9iEL6';
-$recaptcha_response = $_POST['token'];
-
-if(!$recaptcha_response){
-    error_log("ocurrio un error al obtener el token de captcha");
-}
-
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = [
-    'secret' => $recaptcha_secret,
-    'response' => $recaptcha_response,
-];
-
-$options = [
-    'http' => [
-        'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method' => 'POST',
-        'content' => http_build_query($data),
-    ],
-];
-
-$context = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
-$result_json = json_decode($result, true);
-
-if ($result_json['success']) {
-    $mail->Body = "Nombre: {$name} <br> Email: {$email} <br> Telefono : (+{$country_code}) {$phone} <br> Fecha : {$date} <br> Hora : {$time} <br> Personas : {$people} <br> Mensaje : {$message}";
-    $mail->AddAddress("contacto@acuabar.com");
-    if(!$mail->Send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "OK";
+    if (
+        $name === ''
+        || $email === false
+        || $phone === ''
+        || !$validDate
+        || !$validTime
+        || !$withinBusinessHours
+        || $people === false
+    ) {
+        respond('error', 'Please check the required fields, contact details, and reservation time.', 400);
+        exit;
     }
-} else {
-    error_log("ocurrio un error con el captcha");
-    exit;
+
+    if (!verify_recaptcha('reservation')) {
+        respond('error', 'The security check could not be verified. Please try again.', 400);
+        exit;
+    }
+
+    $body = 'Name: ' . escape_mail($name)
+        . '<br>Email: ' . escape_mail($email)
+        . '<br>Phone: ' . escape_mail($phone)
+        . '<br>Date: ' . escape_mail($date)
+        . '<br>Time: ' . escape_mail($time)
+        . '<br>People: ' . escape_mail((string) $people)
+        . '<br>Message:<br>' . nl2br(escape_mail($message));
+
+    send_acuabar_email('Website table request', $body, $email);
+    respond('ok', 'Your request was sent. We will contact you to confirm.', 200);
+} catch (Throwable $error) {
+    error_log('Reservation form error: ' . $error->getMessage());
+    respond('error', 'We could not send your request right now. Please call us or try again later.', 503);
 }
-
-
-
-?>
